@@ -13,10 +13,11 @@ const Login = () => {
     signInWithPopup(auth, provider).then((data) => {
       setValue(data.user.email);
       localStorage.setItem("email", data.user.email);
-    });
-    Swal.fire({
-      text: "Login Succesful",
-      icon: "success",
+      Swal.fire({
+        text: "Login Succesful",
+        icon: "success",
+      });
+      navigate("/home")
     });
   };
 
