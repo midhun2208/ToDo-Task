@@ -1,38 +1,58 @@
-.App {
+.logo {
+  height: 60px;
+}
+.loginPage-img {
+  height: 100vh;
+}
+.login-form-body {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.google-logo {
+  height: 40px;
+  border-radius: 5px;
+}
+.login-btn {
+  background-color: rgb(133, 165, 255);
+  border: 0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.input-field{
+  height: 50px;
+  border-radius: 2px;
+  border: 1px solid rgb(199, 199, 199);
+  width: 300px;
+}
+::placeholder{
+  color: black;
+  font-size:medium;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.add-btn{
+  background-color: rgb(133, 165, 255);
+  border: 0;
+  color: white;
+  width: 250px;
+}
+.toDoList-Body{
+  border-left: 1px solid rgb(150, 149, 149);
+}
+.serachInput{
+  border-radius: 2px;
+  border: 1px solid rgb(199, 199, 199);
+
+}
+.dropDwon{
+  border-radius: 2px !important;
+  background-color:  rgb(255, 255, 255) !important;
+  border: 1px solid rgb(182, 173, 173) !important;
+  color: black !important;
+}
+
+@media (max-width: 769px) {
+  .img {
+    display: none;
   }
 }
