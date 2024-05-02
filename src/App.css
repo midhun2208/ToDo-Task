@@ -2,7 +2,8 @@
   height: 60px;
 }
 .loginPage-img {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 .login-form-body {
   text-align: center;

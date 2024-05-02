@@ -30,10 +30,10 @@ const Login = () => {
             src="https://i.postimg.cc/kXV7j29R/Screenshot-2024-05-02-153000-removebg-preview.png"
             alt=""
           />
-          <Container className="p-5 ms-5 mt-5 login-form-body">
-            <div>
-              <h2>LOGIIN</h2>
-              <p className="ms-5 me-5 mt-4">
+          <Container className="p-5  mt-5 login-form-body">
+            <div className="col-md-12">
+              <h2>LOGIN</h2>
+              <p className=" mt-4">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
                 est inventore, facere incidunt nihil ullam quos placeat! Numquam
                 veniam ullam soluta voluptatum fuga error? Ipsam obcaecati

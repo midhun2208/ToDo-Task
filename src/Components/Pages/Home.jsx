@@ -45,18 +45,18 @@ const Home = () => {
       <div>
         <Row className="mt-5">
           <Col lg={6} md={12}>
-            <Container className="ps-5 pe-5">
+            <Container className="">
               <img
                 className="logo ms-5 mt-3"
                 src="https://i.postimg.cc/kXV7j29R/Screenshot-2024-05-02-153000-removebg-preview.png"
                 alt=""
               />
-              <div className="text-center mt-5 p-5">
+              <div className="text-center mt-5 p-5 ">
                 <h2>
                   <b>TODO</b>
                 </h2>
-                <div style={{ textAlign: "justify" }} className="m-4">
-                  <p className="ms-5 me-5">
+                <div style={{ textAlign: "justify" }} className="mt-3 p-4">
+                  <p className="">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Earum pariatur ipsa porro ipsum, optio voluptas dicta ea eos
                     aspernatur sapiente quaerat dolores aliquam. Eum ex
@@ -90,7 +90,7 @@ const Home = () => {
               </div>{" "}
             </Container>
           </Col>
-          <Col className="toDoList-Body" lg={6}>
+          <Col className="toDoList-Body" lg={6} md={12}>
             <TodoList />
           </Col>
         </Row>
