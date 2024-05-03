@@ -7,7 +7,6 @@ import Swal from "sweetalert2";
 
 const Home = () => {
   const list = useSelector((state) => state.toDo.items);
-  console.log(list);
 
   const [add, setAdd] = useState({
     id: list.length + 1,
@@ -28,7 +27,7 @@ const Home = () => {
     } else {
       dispatch(addItem(add));
       setAdd({
-        id: list.length +2 ,
+        id: list.length + 2,
         task: "",
         description: "",
         completed: false,
