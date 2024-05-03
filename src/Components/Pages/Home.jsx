@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "./Redux/toDoSlice";
 import Swal from "sweetalert2";
 
-
 const Home = () => {
   const list = useSelector((state) => state.toDo.items);
+
 
   const [add, setAdd] = useState({
     id: list.length + 1,
@@ -23,11 +23,12 @@ const Home = () => {
     if (!task || !description) {
       Swal.fire({
         text: "Fill the form ",
-        icon: "error"
+        icon: "error",
       });
     } else {
       dispatch(addItem(add));
       setAdd({
+        id: list.length + 1,
         task: "",
         description: "",
         completed: false,
@@ -35,14 +36,14 @@ const Home = () => {
       });
       Swal.fire({
         text: "Item Added",
-        icon: "success"
+        icon: "success",
       });
     }
   };
 
   return (
     <div>
-      <div className="container-fluid"> 
+      <div className="container-fluid">
         <Row className="mt-5">
           <Col lg={6} md={12}>
             <Container className="">
