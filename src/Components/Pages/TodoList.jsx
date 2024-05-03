@@ -33,7 +33,6 @@ const TodoList = () => {
       text: "Marked as Favorite",
       icon: "success"
     });
-   
   };
 
   const filteredList = () => {
@@ -42,7 +41,6 @@ const TodoList = () => {
       filteredList = filteredList.filter((item) => item.completed);
     } else if (filter === "favorite") {
       filteredList = filteredList.filter((item) => item.favorite);
-
     }
     
     if (search) {
@@ -77,7 +75,7 @@ const TodoList = () => {
                 <Dropdown.Item onClick={() => setFilter(null)}>
                   All
                 </Dropdown.Item>
-                <Dropdown.Item value="Completed"  onClick={() => setFilter("completed")}>
+                <Dropdown.Item value="completed"  onClick={() => setFilter("completed")}>
                   Completed
                 </Dropdown.Item>
                 <Dropdown.Item onClick={() => setFilter("favorite")}>
@@ -88,42 +86,46 @@ const TodoList = () => {
           </Col>
         </Row>
         <div className="list mt-5 pt-2">
-          {filteredList().length === list.length ? filteredList().map((i, index) => (
-            <React.Fragment key={index}>
-              <h4>
-                {i?.task} {i?.completed ? "✅" : ""} {i?.favorite ? "❤️" : ""}
-              </h4>
-              <div className="d-flex">
-                <div>
-                  <p>{i?.description}</p>
-                </div>
+          {filteredList().length === 0 ? (
+            <h3 className="text-center mt-3 text-danger">ToDo Not Found!!!</h3>
+          ) : (
+            filteredList().map((i, index) => (
+              <React.Fragment key={index}>
+                <h4>
+                  {i?.task} {i?.completed ? "✅" : ""} {i?.favorite ? "❤️" : ""}
+                </h4>
+                <div className="d-flex">
+                  <div>
+                    <p>{i?.description}</p>
+                  </div>
 
-                <div className="text-end w-100">
-                  <Dropdown>
-                    <Dropdown.Toggle
-                      className="dropDwon btn"
-                      style={{ textDecoration: "none" }}
-                    >
-                      <i className="fa-solid fa-ellipsis-vertical"></i>
-                    </Dropdown.Toggle>
+                  <div className="text-end w-100">
+                    <Dropdown>
+                      <Dropdown.Toggle
+                        className="dropDwon btn"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <i className="fa-solid fa-ellipsis-vertical"></i>
+                      </Dropdown.Toggle>
 
-                    <Dropdown.Menu>
-                      <Dropdown.Item onClick={() => handleComplete(i)}>
-                        Completed
-                      </Dropdown.Item>
-                      <Dropdown.Item onClick={() => handleFavorite(i)}>
-                        Favorite
-                      </Dropdown.Item>
-                      <Dropdown.Item onClick={() => handleDelete(i?.id)}>
-                        Delete
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+                      <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => handleComplete(i)}>
+                          Completed
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleFavorite(i)}>
+                          Favorite
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleDelete(i?.id)}>
+                          Delete
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
                 </div>
-              </div>
-              <hr />
-            </React.Fragment>
-          )):<h3 className="text-center mt-3 text-danger">ToDo Not Found!!!</h3>}
+                <hr />
+              </React.Fragment>
+            ))
+          )}
         </div>
       </Container>
     </div>

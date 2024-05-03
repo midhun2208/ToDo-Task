@@ -42,7 +42,7 @@ const Home = () => {
 
   return (
     <div>
-      <div>
+      <div className="container-fluid"> 
         <Row className="mt-5">
           <Col lg={6} md={12}>
             <Container className="">
