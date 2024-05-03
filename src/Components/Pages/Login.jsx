@@ -22,7 +22,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div style={{overflow:"hidden"}}>
       <Row>
         <Col lg={6} md={6} sm={12} className=" p-5">
           <img
